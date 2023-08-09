@@ -58,19 +58,19 @@ const About = () => {
                                 Mi nombre es Guillermo Jofre. Empece en el mundo IT casi sin querer, deseaba realizar una página web con una plantilla gratuita, y me encontré con límitaciones que sólo podía superar abonando la plantilla. Entonces me pregunté, ¿cómo hacían las personas que se dedicaban a esto?
                             </p>
                             <p className="my-4 font-medium">
-                                Inicie un bootcamp aprendiendo JavaScript y varias herramientas como ReactJs, ReduxJs, entre otras, para el frontend, y Node, ExpressJs para el backend.
+                                Inicie un bootcamp aprendiendo JavaScript y varias herramientas como ReactJs, ReduxJs, entre otras, para el frontend, y NodeJS, ExpressJs, Sequelize para el backend.
                             </p>
                             <p className="my-4 font-medium">
                                 Al finalizar ese bootcamp, descubrí que lo que realmente me apasionaba era el backend, por lo que estuve averiguando que lenguajes se utilizaban mayormente para esto.
                             </p>
                             <p className="my-4 font-medium">
-                                Y descubrí...Java, al principio me mareaba, me causaba la sensación que estaba entrando en un mar de incertidumbres. Las líneas de código parecían un enigma y los conceptos abstractos a menudo me dejaban perplejo.
+                                Y descubrí... Java, al principio me mareaba, me causaba la sensación que estaba entrando en un mar de incertidumbres. Las líneas de código parecían un enigma y los conceptos abstractos a menudo me dejaban perplejo.
                             </p>
                             <p className="my-4 font-medium">
                             Esta etapa de incertidumbre inicial me enseñó la importancia de la perseverancia y la voluntad de aprender. Hoy, miro hacia atrás con gratitud y asombro el largo camino recorrido.
                             </p>
                             <p className="font-medium">
-                            Mi viaje en el mundo de Java continúa. Si estás comenzando en este camino, recuerda que cada paso cuenta y cada desafío es una oportunidad disfrazada.
+                            Mi viaje en el mundo de Java continúa. Si estás comenzando en este camino, recuerda que cada paso cuenta y cada desafío es una oportunidad.
                             </p>
                         </div>
                         <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light xl:col-span-4 md:order-1 md:col-span-8">
