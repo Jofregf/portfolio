@@ -61,6 +61,13 @@ const Education = () => {
                         certificate= "https://todocodeacademy.com/certificate/reb"
                     />
                     <Details
+                        type="Programación Orientada a Objetos"
+                        time="2023"
+                        place="TodoCode Academy"
+                        info="Lo revelante del curso incluye la Programación Orientada a Objetos (POO) utilizando Java como lenguaje de programación, propiedades de la POO, excepciones, relaciones entre clases, Java Persistence API (JPA)."
+                        certificate= "https://todocodeacademy.com/certificate/vpa/"
+                    />
+                    <Details
                         type="Spring"
                         time="2022"
                         place="OpenBootcamp"
