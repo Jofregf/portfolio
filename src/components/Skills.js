@@ -29,19 +29,19 @@ const Skills = () => {
                 >
                     Web
                 </motion.div>
-                <Skill name="Java" x="-1vw" y="-8vw"/>
+                <Skill name="Java" x="-5vw" y="-8vw"/>
                 <Skill name="Spring Boot" x="10vw" y="-12vw"/>
-                <Skill name="PostgreSQL" x="-25vw" y="-9vw"/>
-                <Skill name="MySQL" x="26vw" y="-5vw"/>
-                <Skill name="Postman" x="0vw" y="-21vw"/>
+                <Skill name="PostgreSQL" x="-21vw" y="-14vw"/>
+                <Skill name="MySQL" x="30vw" y="-5vw"/>
+                <Skill name="Postman" x="12vw" y="-21vw"/>
                 <Skill name="HTML" x="-12vw" y="5vw"/>
                 <Skill name="CSS" x="12vw" y="5vw"/>
-                <Skill name="JavaScript" x="0vw" y="12vw"/>
-                <Skill name="Node" x="28vw" y="5vw"/>
-                <Skill name="Express" x="-29vw" y="1vw"/>
-                <Skill name="NextJs" x="20vw" y="12vw"/>
-                <Skill name="ReactJS" x="-23vw" y="10vw"/>
-                <Skill name="Redux" x="-12vw" y="19vw"/>
+                <Skill name="JavaScript" x="2vw" y="13vw"/>
+                <Skill name="Node" x="30vw" y="5vw"/>
+                <Skill name="Express" x="-31vw" y="1vw"/>
+                <Skill name="NextJs" x="20vw" y="14vw"/>
+                <Skill name="ReactJS" x="-25vw" y="10vw"/>
+                <Skill name="Redux" x="-12vw" y="21vw"/>
 
             </div>
         

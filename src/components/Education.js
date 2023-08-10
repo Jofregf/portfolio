@@ -22,7 +22,7 @@ const Details = ({type, time, place, info, certificate}) => {
                     {time} | {place}
                 </span>
                 <p className="font-medium w-full md:text-sm">{info}</p>
-                <p> 
+                <span> 
                     <a 
                         href={`${certificate}`}
                         target="_blank" 
@@ -30,7 +30,7 @@ const Details = ({type, time, place, info, certificate}) => {
                     >
                         {certificate ? <p>Certificado</p> : null}
                     </a>
-                </p>
+                </span>
             </motion.div>
         </li>
     )
