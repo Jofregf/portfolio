@@ -53,7 +53,7 @@ const Experience = () => {
                         position="Backend" company="TodoCode Academy"
                         companyLink="https://todocodeacademy.com/"
                         time="Julio 2023-Agosto 2023"
-                        work="Backend realizado con Java y Spring Boot para el manejo del inventario de un bazar, incluyendo el registro de clientes y las ventas."
+                        work="Backend realizado con Java y Spring Boot para el manejo del inventario de un bazar, incluyendo el registro de clientes y las ventas, realizado durante el curso de Spring impartido por TodoCode Academy."
                     />
                     <Details
                         position="Backend" company="TodoCode Academy"
