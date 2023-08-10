@@ -101,7 +101,7 @@ const Experience = () => {
                         position="Investigación Científica" company="Universität Hamburg"
                         companyLink="https://www.uni-hamburg.de/"
                         time="2007-2008" 
-                        work="Pasantías de investigación científica realizadas en el hospital Hamburg-Eppendorf. Alemania."
+                        work="Pasantías de investigación científica realizadas en el hospital Hamburg-Eppendorf, Alemania."
                     />
                 </ul>
             </div>
