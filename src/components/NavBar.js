@@ -123,8 +123,8 @@ const NavBar = () => {
                         href="https://github.com/Jofregf" 
                         target={"_blank"}
                         whileHover={{y:-2}}
-                        whileTap={{scale:0.9}}
-                        className="w-6 mx-3"
+                        whileTap={{scale:5}}
+                        className="w-9 mx-3"
                     >
                         <GithubIcon />
                     </motion.a>
@@ -133,7 +133,7 @@ const NavBar = () => {
                         target={"_blank"}
                         whileHover={{y:-2}}
                         whileTap={{scale:0.9}}
-                        className="w-6 mx-3"
+                        className="w-9 mx-3 "
                     >
                         <LinkedInIcon />
                     </motion.a>
@@ -184,7 +184,7 @@ const NavBar = () => {
                             target={"_blank"}
                             whileHover={{y:-2}}
                             whileTap={{scale:0.9}}
-                            className="w-6 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1"
+                            className="w-7 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1"
                         >
                             <GithubIcon />
                         </motion.a>
@@ -193,7 +193,7 @@ const NavBar = () => {
                             target={"_blank"}
                             whileHover={{y:-2}}
                             whileTap={{scale:0.9}}
-                            className="w-6 mx-3 sm:mx-1"
+                            className="w-7 mx-3 sm:mx-1 rounded-full bg-light dark:bg-dark"
                         >
                             <LinkedInIcon />
                         </motion.a>

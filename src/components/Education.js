@@ -57,7 +57,7 @@ const Education = () => {
                         type="Desarrollo de APIs en Java con SpringBoot"
                         time="2023"
                         place="TodoCode Academy"
-                        info="Lo revelante del curso incluye arquitectura Cliente-Servidor, Protocolo HTTP, Gestores de dependencias como Maven o Gradle, Spring Boot, Modelo Vista Controlador, Patrones de diseño DTO, Inyección de Dependencias, Arquitectura Multicapa, JPA, Hibernate."
+                        info="Lo revelante del curso incluye arquitectura Cliente-Servidor, Protocolo HTTP, Gestores de dependencias como Maven o Gradle, Spring Boot, Modelo Vista Controlador, Patrones de diseño DTO, Inyección de Dependencias, Arquitectura Multicapa, Hibernate."
                         certificate= "https://todocodeacademy.com/certificate/reb"
                     />
                     <Details
