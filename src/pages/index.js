@@ -34,7 +34,7 @@ export default function Home() {
                         </div>
                         <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center pl-10">
                             <AnimatedText text="Materializando ideas a través del código" className="!text-6xl !text-left xl:!text-6xl lg:!text-center lg:!text-5xl md:!text-4xl md:!text-center sm:!text-3xl sm:!text-center"/>
-                            <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
+                            <p className="my-4 text-base font-medium md:text-sm md:!text-center sm:text-xs sm:!text-center">
                                 Como desarrollador backend, me dedico a convertir ideas en aplicaciones web innovadoras.
                                 A través de mis proyectos, te invito a explorar mi sólida experiencia en el mundo del desarrollo web y en particular en el framework Spring Boot.
                             </p>
