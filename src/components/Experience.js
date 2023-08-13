@@ -50,14 +50,14 @@ const Experience = () => {
                 />
                 <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
                     <Details
-                        position="Backend" company="TodoCode Academy"
-                        companyLink="https://todocodeacademy.com/"
+                        position="Backend" company="Proyecto Propio"
+                        companyLink="/"
                         time="Julio 2023-Agosto 2023"
                         work="Backend realizado con Java y Spring Boot para el manejo del inventario de un bazar, incluyendo el registro de clientes y las ventas, realizado durante el curso de Spring impartido por TodoCode Academy."
                     />
                     <Details
-                        position="Backend" company="TodoCode Academy"
-                        companyLink="https://todocodeacademy.com/"
+                        position="Backend" company="Proyecto Propio"
+                        companyLink="/"
                         time="Junio 2023"
                         work="Realización de aplicaciones de escritorios, producidas durante la realización del curso de Programación Orientada a Objetos impartido  por TodoCode Academy."
                     />

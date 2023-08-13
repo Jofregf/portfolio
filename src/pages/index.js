@@ -32,7 +32,7 @@ export default function Home() {
                                 33vw"
                             />
                         </div>
-                        <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center pl-10">
+                        <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center pl-10 md:pl-0 sm:pl-0 xs:pl-0">
                             <AnimatedText text="Materializando ideas a través del código" className="!text-6xl !text-left xl:!text-6xl lg:!text-center lg:!text-5xl md:!text-4xl sm:!text-3xl"/>
                             <p className="my-4 text-base font-medium md:text-sm md:!text-center sm:text-xs">
                                 Como desarrollador backend, me dedico a convertir ideas en aplicaciones web innovadoras.
