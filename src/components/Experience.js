@@ -71,7 +71,7 @@ const Experience = () => {
                         position="Backend" company="Henry"
                         companyLink="https://www.soyhenry.com/"
                         time="Marzo 2022-Abril 2022" address="| Buenos Aires-Arg"
-                        work="Trabajo final en grupo para obtener el título de full stack del bootcamp Henry. Realización del backend de un e-commerce."
+                        work="Trabajo final en grupo para obtener el título de full stack del bootcamp Henry. Realización del backend y chat online de un e-commerce."
                     />
                     <Details
                         position="Full Stack" company="Henry"
