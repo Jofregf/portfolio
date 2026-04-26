@@ -12,10 +12,10 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>GJ dev | Inicio</title>
+                <title>GJ analista | Inicio</title>
                 <meta
                     name="description"
-                    content="Java Backend Developer"
+                    content="Analista de Datos"
                 />
             </Head>
             <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
@@ -33,10 +33,9 @@ export default function Home() {
                             />
                         </div>
                         <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center pl-10 md:pl-0 sm:pl-0 xs:pl-0">
-                            <AnimatedText text="Materializando ideas a través del código" className="!text-6xl !text-left xl:!text-6xl lg:!text-center lg:!text-5xl md:!text-4xl sm:!text-3xl"/>
+                            <AnimatedText text="Transformo datos en decisiones claras" className="!text-6xl !text-left xl:!text-6xl lg:!text-center lg:!text-5xl md:!text-4xl sm:!text-3xl"/>
                             <p className="my-4 text-base font-medium md:text-sm md:!text-center sm:text-xs">
-                                Como desarrollador backend, me dedico a convertir ideas en aplicaciones web innovadoras.
-                                A través de mis proyectos, te invito a explorar mi sólida experiencia en el mundo del desarrollo web y en particular en el framework Spring Boot.
+                                No se trata solo de analizar datos, sino de convertirlos en respuestas concretas y accionables. A través de mis proyectos, muestro cómo los datos pueden revelar oportunidades, optimizar decisiones y generar impacto real.
                             </p>
                             <div className="flex items-center self-start mt-2 lg:self-center">
                                 <Link 

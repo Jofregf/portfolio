@@ -24,25 +24,24 @@ const Skills = () => {
             md:bg-circularLightMd md:dark:circularDarktMd
             sm:bg-circularLightSm sm:circularDarkSm">
                 <motion.div 
-                    className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-8 shadow-dark cursor-pointer dark:text-dark dark:bg-light lg:p-6 md:p-4 xs:text-xs xs:p-2"
+                    className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-2 shadow-dark cursor-pointer dark:text-dark dark:bg-light lg:p-6 md:p-4 xs:text-xs xs:p-2"
                     whileHover={{scale:1.05}}
                 >
-                    Web
+                    Analista de Datos
                 </motion.div>
-                <Skill name="Java" x="-5vw" y="-8vw"/>
-                <Skill name="Spring Boot" x="10vw" y="-12vw"/>
-                <Skill name="PostgreSQL" x="-21vw" y="-14vw"/>
+                <Skill name="Python" x="-5vw" y="-8vw"/>
+                <Skill name="SQL" x="10vw" y="-11vw"/>
+                <Skill name="PostgreSQL" x="-17vw" y="-14vw"/>
                 <Skill name="MySQL" x="30vw" y="-5vw"/>
-                <Skill name="Postman" x="12vw" y="-21vw"/>
-                <Skill name="HTML" x="-12vw" y="5vw"/>
-                <Skill name="CSS" x="12vw" y="5vw"/>
-                <Skill name="JavaScript" x="2vw" y="13vw"/>
-                <Skill name="Node" x="30vw" y="5vw"/>
-                <Skill name="Express" x="-31vw" y="1vw"/>
-                <Skill name="NextJs" x="20vw" y="14vw"/>
-                <Skill name="ReactJS" x="-25vw" y="10vw"/>
-                <Skill name="Redux" x="-12vw" y="21vw"/>
-
+                <Skill name="Excel" x="-12vw" y="5vw"/>
+                <Skill name="Sheets" x="14vw" y="2vw"/>
+                <Skill name="Power Bi" x="2vw" y="12.5vw"/>
+                <Skill name="Pandas" x="30vw" y="5vw"/>
+                <Skill name="Numpy" x="-32vw" y="1vw"/>
+                <Skill name="Looker Studio" x="-22vw" y="-5vw"/>
+                <Skill name="Estadística" x="-15vw" y="15vw"/>
+                <Skill name="Git" x="15vw" y="20vw"/>
+                <Skill name="Scrum" x="15vw" y="-20vw"/>
             </div>
         
         </>
