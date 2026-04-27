@@ -1,6 +1,7 @@
-import React, { useRef } from 'react'
-import { motion, useScroll } from 'framer-motion';
-import LiIcon from './LiIcon';
+"use client";
+import React, { useRef } from "react"
+import { motion, useScroll } from "framer-motion";
+import LiIcon from "./LiIcon";
 
 
 const Details = ({type, time, place, info, certificate}) => {

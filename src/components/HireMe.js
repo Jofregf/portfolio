@@ -1,6 +1,7 @@
-import React from 'react'
-import { CircularText } from './Icons'
-import Link from 'next/link'
+"use client";
+import React from "react"
+import { CircularText } from "./Icons"
+import Link from "next/link"
 
 const HireMe = () => {
   return (
