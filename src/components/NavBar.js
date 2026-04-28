@@ -6,6 +6,8 @@ import { useRouter } from "next/router";
 import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon } from "./Icons";
 import {motion} from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/constants/translations";
 
 const CustomLink = ({ href, title, className = "" }) => {
 
@@ -67,7 +69,8 @@ const NavBar = () => {
 
     const [mode, setMode] = useThemeSwitcher();
     const [isOpen, setIsOpen] = useState(false);
-
+    const { language, toggleLanguage } = useLanguage()
+    const t = translations[language];
     const handleClick = () => {
         setIsOpen(!isOpen)
     }
@@ -104,17 +107,17 @@ const NavBar = () => {
                 <nav>
                     <CustomLink 
                         href="/" 
-                        title="Inicio" 
+                        title={t.nav.home}
                         className="mr-4" 
                     />
                     <CustomLink 
                         href="/about" 
-                        title="Conóceme" 
+                        title={t.nav.about} 
                         className="mx-4" 
                     />
                     <CustomLink
                         href="/projects"
-                        title="Proyectos"
+                        title={t.nav.projects}
                         className="ml-4"
                     />
                 </nav>
@@ -148,6 +151,12 @@ const NavBar = () => {
                             mode === "dark" ? <SunIcon className={"fill-dark"}/> : <MoonIcon className={"fill-dark"}/>
                         }
                     </button>
+                    <button
+                        onClick={toggleLanguage}
+                        className="ml-3 flex items-center justify-center rounded-full px-3 py-1 border border-solid border-dark dark:border-light"
+                    >
+                        {language === "es" ? "EN" : "ES"}
+                    </button>
                 </nav>
             </div>
 
@@ -161,19 +170,19 @@ const NavBar = () => {
                     <nav className="flex items-center flex-col justify-center">
                         <CustomMobileLink 
                             href="/" 
-                            title="Inicio" 
+                            title={t.nav.home} 
                             className=""
                             toggle={handleClick} 
                         />
                         <CustomMobileLink 
                             href="/about" 
-                            title="Conóceme" 
+                            title={t.nav.about} 
                             className=""
                             toggle={handleClick} 
                         />
                         <CustomMobileLink
                             href="/projects"
-                            title="Proyectos"
+                            title={t.nav.projects}
                             className=""
                             toggle={handleClick}
                         />
@@ -208,11 +217,19 @@ const NavBar = () => {
                                 mode === "dark" ? <SunIcon className={"fill-dark"}/> : <MoonIcon className={"fill-dark"}/>
                             }
                         </button>
+                        <button
+                            onClick={toggleLanguage}
+                            // className="ml-3 flex items-center justify-center rounded-full px-3 py-1 border border-solid border-light dark:border-dark"
+                            className={`ml-3 flex items-center justify-center rounded-full p-1
+                                ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"} sm:mx-1
+                            `}
+                        >
+                            {language === "es" ? "EN" : "ES"}
+                        </button>
                     </nav>
                     </motion.div>
                 : null
             }
-
             <div className="absolute left-[50%] top-2 translate-x-[-50%]">
                 <Logo />
             </div>

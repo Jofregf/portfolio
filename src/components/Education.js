@@ -2,11 +2,13 @@
 import React, { useRef } from "react"
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
-
+import { useLanguage } from "../context/LanguageContext";
+import { educationData } from "../data/educations";
 
 const Details = ({type, time, place, info, certificate}) => {
 
     const ref = useRef(null);
+    const { language } = useLanguage();
 
     return (
         <li ref={ref} className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between md:w-[80%]">
@@ -31,7 +33,7 @@ const Details = ({type, time, place, info, certificate}) => {
                             target="_blank"
                             className="text-primary dark:text-primaryDark capitalize"
                         >
-                            <p>Certificado</p>
+                            <p>{language === "es" ? "Certificado" : "Diploma"}</p>
                         </a>
                     )}
                 </span>
@@ -48,46 +50,23 @@ const Education = () => {
         offset: ["start end", "center start"]
     });
 
+    const { language } = useLanguage();
+    const data = educationData[language];
+
     return (
         <div className="my-64">
-            <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">Educación</h2>
+            <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
+                {language === "es" ? "Educación" : "Education"}
+            </h2>
             <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
                 <motion.div 
                     style={{scaleY: scrollYProgress}}
                     className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]"
                 />
                 <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
-                    
-                    <Details
-                        type="Fundamentos de Inteligencia Artificial"
-                        time="2025"
-                        place="Guayerd/IBM"
-                        info="Programa de fundamentos de Inteligencia Artificial, realizado con la fundación Guayerd en cooperación con IBM."
-                        certificate= {"/Certificates/IA_SkillsBuild.png"}
-                    />
-
-                    <Details
-                        type="Fundamentos de Data Analytics"
-                        time="2024"
-                        place="Guayerd/IBM"
-                        info="Programa de analista de datos, realizado con la fundación Guayerd en cooperación con IBM."
-                        certificate= {"/Certificates/DataAnalist_ SkillsBuild.pdf"}
-                    />
-                    
-                    <Details
-                        type="Full Stack Web Developer"
-                        time="2021-2022"
-                        place="Henry"
-                        info="Programa de desarrollador fullstack, impartido en el bootcamp de Henry"
-                        certificate={"/Certificates/HenryFullstack.pdf"}
-                    />
-
-                    <Details
-                        type="Lic. en Biología Molecular"
-                        time="1997-2006"
-                        place="Universidad Nacional de San Luis"
-                        info="Carrera de grado para obtener el título de Lic. en biología molecular, el cual te permite trabajar en laboratorios de investigación científica."
-                    />
+                    {data.map((item, index) => {
+                        return <Details key={index} {...item} />;
+                    })}
                 </ul>
             </div>
         </div>

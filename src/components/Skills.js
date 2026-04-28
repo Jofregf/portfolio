@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import {motion} from "framer-motion";
+import { useLanguage } from "../context/LanguageContext";
 
 const Skill = ({name, x, y}) => {
     return (
@@ -18,9 +19,13 @@ const Skill = ({name, x, y}) => {
 }
 
 const Skills = () => {
+    const { language } = useLanguage();
+    
     return (
         <>
-            <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32 ">Skills</h2>
+            <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32 ">
+                {language === "es" ? "Habilidades" : "Skills"}
+            </h2>
             <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark lg:h-[80vh] sm:h-[60vh] xs:h-[50vh] lg:bg-circularLightLg lg:dark:bg-circularDarkLg
             md:bg-circularLightMd md:dark:circularDarktMd
             sm:bg-circularLightSm sm:circularDarkSm">
@@ -28,7 +33,7 @@ const Skills = () => {
                     className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-2 shadow-dark cursor-pointer dark:text-dark dark:bg-light lg:p-6 md:p-4 xs:text-xs xs:p-2"
                     whileHover={{scale:1.05}}
                 >
-                    Analista de Datos
+                    {language === "es" ? "Analista de Datos" : "Data Analyst"}
                 </motion.div>
                 <Skill name="Python" x="-5vw" y="-8vw"/>
                 <Skill name="SQL" x="10vw" y="-11vw"/>
@@ -40,7 +45,7 @@ const Skills = () => {
                 <Skill name="Pandas" x="30vw" y="5vw"/>
                 <Skill name="Numpy" x="-32vw" y="1vw"/>
                 <Skill name="Looker Studio" x="-22vw" y="-5vw"/>
-                <Skill name="Estadística" x="-15vw" y="15vw"/>
+                <Skill name = {language === "es" ? "Estadística" : "Statistics"} x="-15vw" y="15vw"/>
                 <Skill name="Git" x="15vw" y="20vw"/>
                 <Skill name="Scrum" x="15vw" y="-20vw"/>
             </div>

@@ -2,10 +2,12 @@
 import React, { useRef } from 'react'
 import { motion, useScroll } from 'framer-motion';
 import LiIcon from './LiIcon';
+import { useLanguage } from "../context/LanguageContext";
 
 const Details = ({article, magazine, articleLink, time}) => {
 
     const ref = useRef(null);
+    const { language } = useLanguage();
 
     return (
         <li ref={ref} className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between md:w-[80%] ">
@@ -32,7 +34,7 @@ const Details = ({article, magazine, articleLink, time}) => {
                             target="_blank"
                             className="text-primary dark:text-primaryDark capitalize"
                         >
-                            <p>Publicación</p>
+                            <p>{language === "es" ? "Publicación" : "Publication"}</p>
                         </a>
                     )}
                 </span>
@@ -48,10 +50,13 @@ const Publications = () => {
         target: ref,
         offset: ["start end", "center start"]
     });
+    const { language } = useLanguage();
 
     return (
         <div className="my-64">
-            <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16 ">Publicaciones</h2>
+            <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16 ">
+                {language === "es" ? "Publicaciones" : "Publications"}
+            </h2>
             <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
                 <motion.div 
                     style={{scaleY: scrollYProgress}}

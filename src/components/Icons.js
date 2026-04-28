@@ -1,5 +1,7 @@
 "use client";
 import * as React from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "@/constants/translations";
 
 export const GithubIcon = ({ className, ...rest }) => (
     <svg
@@ -376,6 +378,9 @@ export const MoonIcon = ({ className, ...rest }) => (
 );
 
 export const CircularText = ({ text = "Developer · Java · Backend ·", className }) => {
+    const { language } = useLanguage();
+    const t = translations[language];
+    
     return (
         <svg viewBox="0 0 200 200" className={className}>
         
@@ -391,9 +396,9 @@ export const CircularText = ({ text = "Developer · Java · Backend ·", classNa
             />
         </defs>
 
-        <text fill="currentColor" fontSize="20" fontWeight="bold">
+        <text fill="currentColor" fontSize={t.circular.fontSize} fontWeight="bold">
             <textPath href="#circlePath" startOffset="0%">
-            {text}
+            {t.circular.text} 
             </textPath>
         </text>
 

@@ -7,16 +7,21 @@ import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 import {LinkArrow} from "../components/Icons"
 import HireMe from "@/components/HireMe";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/constants/translations";
 
 
 export default function Home() {
+    const { language } = useLanguage();
+    const t = translations[language];
+
     return (
         <>
             <Head>
-                <title>GJ analista | Inicio</title>
+                <title>{t.head.init}</title>
                 <meta
-                    name="description"
-                    content="Analista de Datos"
+                    name={t.head.name}
+                    content={t.head.content}
                 />
             </Head>
             <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
@@ -34,25 +39,26 @@ export default function Home() {
                             />
                         </div>
                         <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center pl-10 md:pl-0 sm:pl-0 xs:pl-0">
-                            <AnimatedText text="Transformo datos en decisiones claras" className="!text-6xl !text-left xl:!text-6xl lg:!text-center lg:!text-5xl md:!text-4xl sm:!text-3xl"/>
+                            <AnimatedText text={t.home.title}
+                            className="!text-6xl !text-left xl:!text-6xl lg:!text-center lg:!text-5xl md:!text-4xl sm:!text-3xl"/>
                             <p className="my-4 text-base font-medium md:text-sm md:!text-center sm:text-xs">
-                                No se trata solo de analizar datos, sino de convertirlos en respuestas concretas y accionables. A través de mis proyectos, muestro cómo los datos pueden revelar oportunidades, optimizar decisiones y generar impacto real.
+                                {t.home.description}
                             </p>
                             <div className="flex items-center self-start mt-2 lg:self-center">
                                 <Link 
-                                    href="/CV-GuillermoJofre.pdf" 
+                                    href={t.home.cvFile} 
                                     target={"_blank"}
                                     className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
                                     download={true}
                                 >
-                                    CV <LinkArrow className={"w-6 ml-1"} />
+                                    {t.home.cv} <LinkArrow className={"w-6 ml-1"} />
                                 </Link>
                                 <Link 
                                     href="mailto:jofregf@gmail.com" 
                                     target={"_blank"}
                                     className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light md:text-base"
                                 >
-                                    Contacto
+                                    {t.home.contact}
                                 </Link>
                             </div>
                         </div>

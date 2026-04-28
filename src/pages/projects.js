@@ -5,20 +5,23 @@ import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 import Image from "next/image";
-import oil from "../../public/Images/projects/Oil_&_Gas_Well_Performance.png";
-import superstore from "../../public/Images/projects/superstore.png"
-import credit from "../../public/Images/projects/credit_risk.png"
-import potenciar from "../../public/Images/projects/potenciar.png"
 import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/constants/translations";
+import { projectData } from "@/data/proyectos"
 
 const FeaturedProject = ({title, summary, img, link, github}) => {
-
+    
+    const { language } = useLanguage();
+    
     const image = (
         <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg group">
 
             <FramerImage
                 src={img}
                 alt={title}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="absolute inset-0 w-full h-full object-cover blur-lg scale-110 opacity-50"
             />
 
@@ -26,6 +29,8 @@ const FeaturedProject = ({title, summary, img, link, github}) => {
                 <FramerImage 
                     src={img} 
                     alt={title} 
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="relative w-full h-full object-contain p-4"
                 />
             </div>
@@ -40,7 +45,7 @@ const FeaturedProject = ({title, summary, img, link, github}) => {
 
                 {link && (
                     <Link href={link} target="_blank" className="bg-white text-black text-lg font-semibold px-4 py-2 rounded-lg hover:bg-gray-200 transition">
-                        Ver Proyecto
+                        {language === "es" ? "Proyecto" : "Project"}
                     </Link>
                 )}
             </div>
@@ -68,7 +73,7 @@ const FeaturedProject = ({title, summary, img, link, github}) => {
 
                 {!link && (
                     <span className="text-sm text-gray-500 italic mt-2">
-                        Demo no disponible
+                        {language === "es" ? "Demo No Disponible" : "Demo Not Available"}
                     </span>
                 )}
             </div>
@@ -78,52 +83,35 @@ const FeaturedProject = ({title, summary, img, link, github}) => {
 
 const FramerImage = motion(Image);
 const projects = () => {
+    
+    const { language } = useLanguage();
+    const t = translations[language];
+    const data = projectData[language];
+
     return (
         <>
             <Head>
-                <title>GJ analyst | Proyectos </title>
-                <meta name="description" content="Analista de Datos" />
+                <title>{t.head.project}</title>
+                <meta
+                    name={t.head.name}
+                    content={t.head.content}
+                />
             </Head>
             <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
                 <Layout className="pt-16">
-                    <AnimatedText text="De la pregunta al resultado: proyectos reales" className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl "/>
+                    <AnimatedText text={t.project.title} className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl "/>
                     <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
-                        <div className="col-span-12">
-                            <FeaturedProject
-                                title="Oil well production analysis"
-                                img={oil}
-                                summary="Análisis de producción de pozos petroleros con pronóstico, límite económico e ingresos para optimizar decisiones operativas y de inversión."
-                                link="https://github.com/Jofregf/oil-well-production-analysis/blob/main/Oil%20Production.pbix"
-                                github="https://github.com/Jofregf/oil-well-production-analysis"
-                            />
-                        </div>
-                        <div className="col-span-12">
-                            <FeaturedProject
-                                title="Superstore Sales Analytics"
-                                img={superstore}
-                                summary="Análisis de ventas y rentabilidad por categoría y región para identificar oportunidades de mejora y optimizar decisiones comerciales."
-                                link="https://github.com/Jofregf/superstore-analytics/blob/main/superstore.pbix"
-                                github="https://github.com/Jofregf/superstore-analytics"
-                            />
-                        </div>
-                        <div className="col-span-12">
-                            <FeaturedProject
-                                title="Credit Risk"
-                                img={credit}
-                                summary="Modelo de evaluación de riesgo crediticio para predecir incumplimientos y mejorar la toma de decisiones financieras."
-                                link={null}
-                                github="https://github.com/Jofregf/Credit-Risk"
-                            />
-                        </div>
-                        <div className="col-span-12">
-                            <FeaturedProject
-                                title="Fundación Potenciar Solidario"
-                                img={potenciar}
-                                summary="Dashboard interactivo para el análisis de datos de una fundación, facilitando la toma de decisiones y el seguimiento de indicadores clave."
-                                link="https://datastudio.google.com/s/snnPyMrx1-s"
-                                github={null}
-                            />
-                        </div>
+                        {data.map((project, index) => (
+                            <div key={index} className="col-span-12">
+                                <FeaturedProject
+                                    title={project.title}
+                                    img={`/Images/projects/${project.img}`}
+                                    summary={project.summary}
+                                    link={project.link}
+                                    github={project.github}
+                                />
+                            </div>
+                        ))}
                     </div>
                 </Layout>
             </main>
