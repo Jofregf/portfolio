@@ -11,7 +11,7 @@ export const translations = {
             description: "No se trata solo de analizar datos, sino de convertirlos en respuestas concretas y accionables.",
             cv: "CV",
             contact: "Contacto",
-            cvFile: "/CV-GuillermoJofre.pdf"
+            cvFile: "/CV_Guillermo Jofre_AnalistaDatos.pdf"
         },
         circular: {
             text: "Analista de Datos · Python · SQL · Power BI ·",
@@ -47,7 +47,7 @@ export const translations = {
             description: "It's not just about analyzing data, but turning it into actionable insights.",
             cv: "CV",
             contact: "Contact",
-            cvFile: "/Guillermo Jofre_CV_Data Analyst-EN.pdf"
+            cvFile: "/CV_Guillermo Jofre_Data Analyst-EN.pdf"
         },
         circular: {
             text: "Data Analyst · Python · Power BI · SQL ·",
